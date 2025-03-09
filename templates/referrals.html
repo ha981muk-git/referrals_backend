@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Referrals | Referral Programs in Germany</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://friendreferrals.de/" />
+    <link rel="alternate" hreflang="de" href="https://friendreferrals.de/de/" />
+
+    <!-- Meta tags remain the same -->
+    <meta name="description" content="Friend Referrals  - Discover the best referral programs, rewards, and bonuses in Germany! Get exclusive deals with premium referral links.">
+    <!-- Other meta tags... -->
+    
+    <!-- CSS styles -->
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-color: #1e293b;
+            --text-light: #64748b;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand:before {
+            content: "\f1e0";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 3rem;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+            animation: fadeInUp 1s ease;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        /* Referral Grid */
+        .referral-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .referral-card {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.75rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .referral-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .referral-card h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .referral-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .referral-link {
+            background-color: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 0.75rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .referral-link input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            background-color: white;
+            transition: all 0.2s;
+        }
+
+        .referral-link input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .copy-btn {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+
+        .copy-btn:hover {
+            background-color: #dee2e6;
+        }
+
+        .visit-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .visit-btn:hover {
+            background-color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .success-animation {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+        }
+
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            background-color: #1e293b;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 24px;
+            position: fixed;
+            z-index: 1000;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Cookie Notice */
+        #cookie-notice {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            max-width: 320px;
+            background-color: white;
+            padding: 1.25rem;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        #cookie-close {
+            background: var(--primary-color);
+            border: none;
+            padding: 8px 16px;
+            margin-top: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        #cookie-close:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #f1f2f6;
+            padding: 3rem 0;
+            border-radius: 30px 30px 0 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+
+        footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loader */
+        .loader {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .loader .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: inline-block;
+            animation: loadingDots 1.4s infinite ease-in-out both;
+        }
+
+        .loader .dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .loader .dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes loadingDots {
+            0%, 80%, 100% { 
+                transform: scale(0);
+            } 40% { 
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                padding: 1rem;
+            }
+            
+            header {
+                padding: 4rem 0;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .referral-card {
+                padding: 1.25rem;
+            }
+            
+            #cookie-notice {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-width: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML structure remains largely the same -->
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="nav-brand">Friend Referrals</a>
+            <div class="nav-links">
+                <a href="#contact">Contact</a>
+                <a href="#privacy-policy">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Earn From Referral Programs in Germany</h1>
+            <p>Get exclusive bonuses and rewards with our premium referral links</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="loading" class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        
+        <div class="referral-grid" id="referralGrid">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy-policy">
+            <h2>Privacy Policy</h2>
+            <p>This website is committed to protecting your privacy and providing a safe browsing experience.</p>
+            <p>Key points to know:</p>
+            <ul style="list-style-type: none; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li>✓ We do not collect any personal data from visitors</li>
+                <li>✓ No cookies are used for tracking purposes</li>
+                <li>✓ No user analytics or visitor tracking is implemented</li>
+            </ul>
+            <p>We use Google Fonts for styling – please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> for information about their data practices.</p>
+            <p>Please note that referral links may redirect you to third-party websites that have their own privacy policies and data collection practices.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Need a personal invitation or referral code? I'm here to help!</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:harsh.mukhiya.official@gmail.com">harsh.mukhiya.official@gmail.com</a></p>
+            <p>I typically respond within 24-48 hours.</p>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast">Link copied to clipboard!</div>
+
+    <!-- Cookie Notice -->
+    <div id="cookie-notice">
+        <p>This website does not use cookies for tracking. <a href="#privacy-policy">Privacy Policy</a></p>
+        <button id="cookie-close">Got it</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Legal Disclaimers -->
+            <p style="font-weight: bold;">Important Legal Notes:</p>
+            <p>⚠️ This is a personal website – not a business. Referral links are shared for informational purposes only.</p>
+            <p>⚠️ Disclosure: Some links are referral links. I may receive rewards if you use them, at no extra cost to you.</p>
+            
+            <!-- Standard Footer -->
+            <p>© 2024 Friend Referrals. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#contact">Contact</a></p>
+            <p>No personal data is collected or stored. Third-party services may have their own policies.</p>
+        </div>
+    </footer>
+
+    <!-- The JavaScript remains the same -->
+    <script>
+        let toastTimeout;
+
+        // Show loading animation initially
+        const loadingElement = document.getElementById('loading');
+        
+        async function loadReferrals() {
+            try {
+                const response = await fetch('/static/referrals.json');
+                const data = await response.json();
+                const referralGrid = document.getElementById('referralGrid');
+                
+                // Hide loading animation
+                loadingElement.style.display = 'none';
+                
+                // Sort referrals by name (optional)
+                data.referrals.sort((a, b) => a.name.localeCompare(b.name));
+                
+                data.referrals.forEach(referral => {
+                    const card = document.createElement('article');
+                    card.className = 'referral-card';
+                    
+                    // Create category badge if available
+                    let categoryBadge = '';
+                    if (referral.category) {
+                        categoryBadge = `<span style="position: absolute; top: 10px; right: 10px; background-color: var(--accent-color); color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.7rem;">${referral.category}</span>`;
+                    }
+                    
+                    // Create rewards or bonus info if available
+                    let bonusInfo = '';
+                    if (referral.bonus) {
+                        bonusInfo = `<p style="color: var(--accent-color); font-weight: bold;"><i class="fas fa-gift"></i> ${referral.bonus}</p>`;
+                    }
+                    
+                    card.innerHTML = `
+                        ${categoryBadge}
+                        <h2>${referral.name}</h2>
+                        ${bonusInfo}
+                        <p>${referral.description}</p>
+                        <div class="referral-link">
+                            <input type="text" value="${referral.link}" readonly aria-label="Referral link">
+                            <div class="button-group">
+                                <button class="btn copy-btn" onclick="copyLink(this)" aria-label="Copy referral link">
+                                    <i class="fas fa-copy"></i>
+                                    Copy
+                                </button>
+                                <a href="${referral.link}" target="_blank" rel="noopener noreferrer" class="btn visit-btn" aria-label="Visit referral link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Visit
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    referralGrid.appendChild(card);
+                });
+                
+                // If no referrals found
+                if (data.referrals.length === 0) {
+                    referralGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">No referral programs available at the moment. Please check back later!</p>';
+                }
+                
+            } catch (error) {
+                console.error('Error loading referrals:', error);
+                loadingElement.style.display = 'none';
+                document.getElementById('referralGrid').innerHTML = 
+                    '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #dc3545;"><i class="fas fa-exclamation-triangle"></i> Unable to load referral programs. Please try again later.</p>';
+            }
+        }
+
+        function copyLink(button) {
+            const input = button.parentElement.parentElement.querySelector('input');
+            input.select();
+            document.execCommand('copy');
+            
+            // Success animation
+            button.classList.add('success-animation');
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            
+            setTimeout(() => {
+                button.classList.remove('success-animation');
+                button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+            }, 1500);
+
+            // Show toast notification
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Close cookie notice
+        document.getElementById('cookie-close').addEventListener('click', function() {
+            document.getElementById('cookie-notice').style.display = 'none';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', loadReferrals);
+    </script>
+</body>
+</html>
